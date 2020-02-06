@@ -37,7 +37,9 @@
         <li>Набор для путешествий «Baxter of California»</li>
       </ul>
       <section>
-        <h2>Фотографии набора для путешествий «Baxter of California»</h2>
+        <h2 class="visually-hidden">
+          Фотографии набора для путешествий «Baxter of California»
+        </h2>
         <img
           src="img/bag-2.jpg"
           width="460"
@@ -73,7 +75,7 @@
       </section>
 
       <section>
-        <h2>Описание товара</h2>
+        <h2 class="visually-hidden">Описание товара</h2>
         <p>Есть в наличии</p>
         <p>Артикул: dexter-ae</p>
         <p>
@@ -112,12 +114,46 @@
         Разработано:
         <a href="https://htmlacademy.ru">HTML Academy</a>
       </p>
+      <section>
+        <h2 class="visually-hidden">Схема проезда</h2>
+        <img src="img/map.jpg" width: 940px; height: 419px; alt="Офис компании
+        по адресу: г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" />
+        <button type="button">Закрыть</button>
+      </section>
     </footer>
 
     <section>
       <h2>Личный кабинет</h2>
       <p>Введите пожалуйста свой логин и пароль</p>
       <!-- Здесь будет форма -->
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input
+            id="user-login"
+            type="email"
+            name="login"
+            placeholder="Логин"
+          />
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input
+            id="user-password"
+            type="password"
+            name="password"
+            placeholder="Пароль"
+          />
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="remember" checked />
+            Запомните меня
+          </label>
+          <a href="#">Я забыл пароль!</a>
+        </p>
+        <button type="submit">Войти</button>
+      </form>
       <button type="button">Закрыть</button>
     </section>
   </body>
