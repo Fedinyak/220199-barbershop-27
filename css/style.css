@@ -207,6 +207,11 @@ a {
   transform: rotate(45deg);
 }
 
+.breadcrumbs li:last-child::after {
+  content: "";
+  display: none;
+}
+
 .breadcrumbs a {
   color: #000000;
 }
@@ -467,14 +472,39 @@ a {
 
 .product-photo-preview {
   list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 .product-photo-preview li {
+  width: 140px;
+  height: 149px;
+  margin-right: 20px;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
+.product-photo-preview li:nth-child(3n) {
+  margin-right: 0;
+}
+
 .product-photo-full {
+  width: 460px;
+  height: 498px;
+  margin: 0;
+  margin-bottom: 20px;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-description {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  margin-bottom: 29px;
+}
+
+.product-description p {
+  width: 200px;
 }
 
 .product-article {
@@ -482,24 +512,85 @@ a {
   color: #aeaeae;
 }
 
+.product-price {
+  display: flex;
+  margin-bottom: 35px;
+}
+
 .product-price b {
+  width: 112px;
+  padding-top: 13px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-bottom: 11px;
+  margin-right: 0;
+
   line-height: 20px;
   text-align: center;
 
   background-color: #e5e5e5;
+
+  box-sizing: border-box;
+}
+
+.product-price .button {
+  display: inline-block;
+  margin-left: 0;
+  padding-left: 17px;
+  padding-right: 17px;
 }
 
 .product-info h3 {
   font-size: 24px;
   line-height: 30px;
+
+  margin: 0;
+  margin-bottom: 27px;
 }
 
 .product-info {
   width: 390px;
+  padding-top: 23px;
+}
+
+.product-info .product-text {
+  margin-bottom: 35px;
+}
+
+.product-info .product-price {
+  display: flex;
+  margin-bottom: 63px;
+}
+
+.product-info p {
+  margin: 0;
 }
 
 .product-info ul {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.product-info li {
+  position: relative;
+
+  padding-left: 23px;
+}
+
+.product-info li::before {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  left: 2px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+  transform: rotate(45deg);
 }
 
 .main-footer .container {
